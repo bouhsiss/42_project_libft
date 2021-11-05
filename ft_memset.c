@@ -1,7 +1,7 @@
 #include <string.h>
-void *ft_memset(void *b, int c, size_t len)
+void *ft_memset(void *dst, int c, size_t len)
 {
-    char *s =(char *)b;
+    char *s =(char *)dst;
     while (len)
     {
         *s = c;

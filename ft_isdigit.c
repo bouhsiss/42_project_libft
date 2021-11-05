@@ -1,9 +1,9 @@
-int ft_isdigit(int n)
+int ft_isdigit(int c)
 {
-    unsigned char c;
+    unsigned char n;
 
-    c = (unsigned char)n;
-    if ( c >= '0' && c <= '9')
+    n = (unsigned char)c;
+    if ( n >= '0' && n <= '9')
     {
         return(1);
     }

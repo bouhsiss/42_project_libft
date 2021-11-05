@@ -1,13 +1,13 @@
-#include<stdio.h>
+#include"libft.h"
 
-int main ()
+int ft_strlen(char *str)
 {
-    int i = 0;
-    char str[] = "This is a potentially long string";
+    int i;
 
+    i= 0;
     while (str[i])
     {
         i++;
     }
-    printf("%d", i);
+    return (i);
 }

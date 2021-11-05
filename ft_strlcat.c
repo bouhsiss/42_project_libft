@@ -8,7 +8,7 @@ int ft_strlen(char *str)
         i++;
     return(i);
 }
-size_t ft_strlcat(char *dst, const char *src, size_t dstsize)
+size_t ft_strlcat(char *dst, const char *src, size_t size)
 {
     int i;
     int len;
@@ -20,7 +20,7 @@ size_t ft_strlcat(char *dst, const char *src, size_t dstsize)
     src2 = (char*)src;
     destlen = ft_strlen(dst);
     srclen = ft_strlen(src2);
-    int *size = (int *)dstsize;
+    int *size = (int *)size;
     len = dstsize - destlen - 1;
     while(src2[i] != '\0'  && i<len )
     {

@@ -1,9 +1,9 @@
-int ft_isalpha(int n)
+int ft_isalpha(int c)
 {
-    unsigned char c;
+    unsigned char n;
 
-    c = (unsigned char)n;
-    if (( c >= 'a' && c <= 'z' ) || (c >=  'A' && c<= 'Z' ))
+    n = (unsigned char)c;
+    if (( n >= 'a' && n <= 'z' ) || (n >=  'A' && n <= 'Z' ))
     {
         return (1);
     }

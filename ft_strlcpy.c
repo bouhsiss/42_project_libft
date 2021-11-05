@@ -9,18 +9,18 @@ int ft_strlen(char *src)
     
     return(i);
 }
-size_t ft_strlcpy(char *dst, const char *src,size_t dstsize)
+size_t ft_strlcpy(char *dst, const char *src,size_t size)
 {
     int i;
 
     char *src2 = (char *)src;
     i = 0;
-    while (i < dstsize -1 && src[i] && dstsize != 0)
+    while (i < size -1 && src[i] && size != 0)
     {
         dst[i] = src[i];
         i++;
     }
-    if (dstsize != 0)
+    if (size != 0)
     {
         dst[i] = '\0';
     }

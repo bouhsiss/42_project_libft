@@ -1,17 +1,17 @@
 #include<string.h>
-void *ft_memcpy(void *destination, const void *source, size_t n)
+void *ft_memcpy(void *dst, const void *src, size_t n)
 {
-    char *dest = (char *)destination;
-    char *src = (char *)source;
+    char *dest = (char *)dst;
+    char *sorc = (char *)src;
     int i = 0;
     while(i<n)
     {
-        *dest = *src;
+        *dest = *sorc;
         i++;
         dest++;
-        src++;
+        sorc++;
     }
-    return(destination);
+    return(dst);
 }
 #include <stdio.h>
 

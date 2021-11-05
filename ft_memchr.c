@@ -1,5 +1,5 @@
 #include<string.h>
-char *ft_strchr(const char *s, int c, size_t n)
+char *ft_memchr(const void *s, int c, size_t n)
 {
     int i;
     char *str;
