@@ -30,7 +30,7 @@ size_t ft_strlcpy(char *dst, const char *src,size_t size)
 int main()
 {
     char dst[10];
-    char src[] = "houda";
+    char src[] = "";
     int rt = ft_strlcpy(dst, src, 3);
     printf("the dst : %s , the return %d", dst, rt);
 }

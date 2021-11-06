@@ -1,6 +1,4 @@
-#include<string.h>
-#include<stdio.h>
-#include<stdlib.h>
+#include"libft.h"
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
    char *source = (char *)src;
@@ -8,28 +6,40 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
    size_t i;
 
    i = 0;
-   char *temp = 0;
-   temp = (char *)malloc (len*sizeof(char));
-   while (i < len)
+   if (source == 0 && desti == 0)
+      return (0);
+   if(source < desti)
    {
-      temp[i] = source[i];
-      i++;
-
+      while (len)
+      {
+         desti[len] = source[len];
+         len--;
+      }
    }
-   i=0;
-   while (i < len )
+   else
    {
-      desti[i] = temp[i];
-      i++;
+      while(i < len)
+      {
+         desti[i] = source[i];
+         i++;
+      }
    }
-   free(temp);
    return(dst);
 }
 
+/*int main () {
+   char dest[] = "oldstring";
+   char src[]  = "news";
 
+   printf("Before memmove dest = %s, src = %s\n", dest, src);
+   ft_memmove(dest, src, 9);
+   printf("After memmove dest = %s, src = %s\n", dest, src);
+
+   return(0);
+}*/
 
 int main () {
-   char dest[] = "abcdef";
+   char dest[] = "0";
 
    printf("Before memmove dest = %s, src = %s\n", dest, dest);
    ft_memmove(dest +2, dest, 3);
