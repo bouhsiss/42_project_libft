@@ -1,19 +1,32 @@
-#include<string.h>
-int ft_memcmp(const void *s1, const void *s2, size_t n)
-{
-    int i = 0;
-    char *c1 = (char *)s1;
-    char *c2 = (char *)s2;
-    while (c1[i] && c2[i] && c1[i] == c2[i] && i < n)
-    {
-        i++;
-    }
-    return(c1[i] - c2[i]);
-}
-#include <stdio.h>
-#include <string.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: hbouhsis <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/11/09 18:44:57 by hbouhsis          #+#    #+#             */
+/*   Updated: 2021/11/10 23:51:23 by hbouhsis         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-int main () {
+#include"libft.h"
+
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
+{	
+	size_t		i;
+	char	*c1;
+	char	*c2;
+
+	i = 0;
+	c1 = (char *)s1;
+	c2 = (char *)s2;
+	while (c1[i] && c2[i] && c1[i] == c2[i] && i < n)
+		i++;
+	return (c1[i] - c2[i]);
+}
+
+/*int main () {
    char str1[15];
    char str2[15];
    int ret;
@@ -32,4 +45,4 @@ int main () {
    }
    
    return(0);
-}
+}*/

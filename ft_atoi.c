@@ -1,33 +1,44 @@
-#include"libft.h"
-int ft_atoi(const char *str)
-{
-        int i;
-        int n;
-        int sign;
-        char *ptr = (char *)str; 
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: hbouhsis <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/11/09 18:43:30 by hbouhsis          #+#    #+#             */
+/*   Updated: 2021/11/10 23:50:09 by hbouhsis         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-        n = 0;
-        sign = 1;
-        
-        while (*str == ' ' || *str == '\t' || *str == '\r'
-            || *str == '\n' || *str == '\v' || *str == '\f')
-            str++;
-        
-        if (*str == '-')
-        {
-            sign *= -1;
-            str++;
-        }
-        else if (*str == '+')
-            str++;
-        while(*str >= '0' && *str <= '9')
-        {
-            n = n * 10 + (*str - 48);
-            str++;
-        }
-        return(n * sign);
+#include"libft.h"
+
+int	ft_atoi(const char *str)
+{
+	int		n;
+	int		sign;
+	char	*ptr;
+
+	ptr = (char *)str;
+	n = 0;
+	sign = 1;
+	while (*str == ' ' || *str == '\t' || *str == '\r'
+		|| *str == '\n' || *str == '\v' || *str == '\f')
+		str++;
+	if (*str == '-')
+	{
+		sign *= -1;
+		str++;
+	}
+	else if (*str == '+')
+		str++;
+	while (*str >= '0' && *str <= '9')
+	{
+		n = n * 10 + (*str - 48);
+		str++;
+	}
+	return (n * sign);
 }
-/*#include <stdio.h>
+#include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 
@@ -35,7 +46,7 @@ int main () {
    int val;
    char str[20];
    
-   strcpy(str, "2147483647");
+   strcpy(str, "9223372036854775807");
    val = ft_atoi(str);
    printf("String value = %s, Int value =%d\n", str, val);
 
@@ -45,4 +56,4 @@ int main () {
 
 
    return(0);
-}*/
+}

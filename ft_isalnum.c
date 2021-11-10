@@ -1,12 +1,24 @@
-int ft_isalnum(int c)
-{
-    unsigned char n;
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: hbouhsis <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/11/09 18:43:59 by hbouhsis          #+#    #+#             */
+/*   Updated: 2021/11/09 18:44:01 by hbouhsis         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-    n = (unsigned char)c;
-    if ((n >= 'a' && n <= 'z') || (n >= 'A' && n <= 'Z')
-        || (n >= '0' && n <= '9'))
-        {
-            return (1);
-        }
-    return(0);
+#include"libft.h"
+
+int	ft_isalnum(int c)
+{
+	unsigned char	n;
+
+	n = (unsigned char)c;
+	if ((n >= 'a' && n <= 'z') || (n >= 'A' && n <= 'Z')
+		|| (n >= '0' && n <= '9'))
+		return (1);
+	return (0);
 }

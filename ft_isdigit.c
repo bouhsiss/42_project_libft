@@ -1,11 +1,23 @@
-int ft_isdigit(int c)
-{
-    unsigned char n;
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: hbouhsis <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/11/09 18:44:28 by hbouhsis          #+#    #+#             */
+/*   Updated: 2021/11/09 18:44:30 by hbouhsis         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-    n = (unsigned char)c;
-    if ( n >= '0' && n <= '9')
-    {
-        return(1);
-    }
-    return(0);
+#include"libft.h"
+
+int	ft_isdigit(int c)
+{
+	unsigned char	n;
+
+	n = (unsigned char)c;
+	if (n >= '0' && n <= '9')
+		return (1);
+	return (0);
 }

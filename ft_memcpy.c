@@ -1,20 +1,37 @@
-#include<string.h>
-void *ft_memcpy(void *dst, const void *src, size_t n)
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: hbouhsis <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/11/09 18:45:07 by hbouhsis          #+#    #+#             */
+/*   Updated: 2021/11/10 23:51:51 by hbouhsis         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include"libft.h"
+
+void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-    char *dest = (char *)dst;
-    char *sorc = (char *)src;
-    int i = 0;
-    while(i<n)
-    {
-        *dest = *sorc;
-        i++;
-        dest++;
-        sorc++;
-    }
-    return(dst);
+	char	*dest;
+	char	*sorc;
+	size_t		i;
+
+	sorc = (char *)src;
+	dest = (char *)dst;
+	i = 0;
+	while (i < n)
+	{
+		*dest = *sorc;
+		i++;
+		dest++;
+		sorc++;
+	}
+	return (dst);
 }
-#include <stdio.h>
-int main () {
+
+/*int main () {
    char dest[] = "oldstring";
 
    printf("Before memmove dest = %s, src = %s\n", dest, dest);
@@ -22,8 +39,8 @@ int main () {
    printf("After memmove dest = %s, src = %s\n", dest, dest);
 
    return(0);
-}
-/*#include <stdio.h>
+}*/
+/*
 
 int main () {
    char dest[] = "abcde";

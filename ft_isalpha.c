@@ -1,11 +1,23 @@
-int ft_isalpha(int c)
-{
-    unsigned char n;
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: hbouhsis <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/11/09 18:44:08 by hbouhsis          #+#    #+#             */
+/*   Updated: 2021/11/09 18:44:11 by hbouhsis         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-    n = (unsigned char)c;
-    if (( n >= 'a' && n <= 'z' ) || (n >=  'A' && n <= 'Z' ))
-    {
-        return (1);
-    }
-    return (0);
+#include"libft.h"
+
+int	ft_isalpha(int c)
+{
+	unsigned char	n;
+
+	n = (unsigned char)c;
+	if ((n >= 'a' && n <= 'z') || (n >= 'A' && n <= 'Z'))
+		return (1);
+	return (0);
 }

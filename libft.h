@@ -27,6 +27,7 @@ int ft_tolower(int c);
 int ft_toupper(int c);
 char *ft_strnstr(const char *haystack, const char *needle, size_t len);
 int atoi(const char *str);
+void *ft_calloc(size_t count, size_t size);
 
 
 #endif
