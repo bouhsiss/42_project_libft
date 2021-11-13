@@ -6,7 +6,7 @@
 /*   By: hbouhsis <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/09 18:28:30 by hbouhsis          #+#    #+#             */
-/*   Updated: 2021/11/10 23:56:15 by hbouhsis         ###   ########.fr       */
+/*   Updated: 2021/11/13 01:09:41 by hbouhsis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
 	size_t		i;
-	char	*src2;
+	char		*src2;
 
 	src2 = (char *)src;
 	i = 0;
@@ -28,7 +28,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 	{
 		dst[i] = '\0';
 	}
-	return (ft_strlen(src2));
+	return (ft_strlen(src));
 }
 /*int main()
 {

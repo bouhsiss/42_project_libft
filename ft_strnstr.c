@@ -6,7 +6,7 @@
 /*   By: hbouhsis <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/09 18:35:48 by hbouhsis          #+#    #+#             */
-/*   Updated: 2021/11/10 23:57:23 by hbouhsis         ###   ########.fr       */
+/*   Updated: 2021/11/13 01:13:15 by hbouhsis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
 	size_t		i;
 	size_t		j;
-	char	*big;
-	char	*lill;
+	char		*big;
+	char		*lill;
 
 	i = 0;
 	big = (char *)haystack;

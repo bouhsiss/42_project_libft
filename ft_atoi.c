@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: hbouhsis <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/09 18:43:30 by hbouhsis          #+#    #+#             */
-/*   Updated: 2021/11/10 23:50:09 by hbouhsis         ###   ########.fr       */
+/*   Created: 2021/11/12 23:54:05 by hbouhsis          #+#    #+#             */
+/*   Updated: 2021/11/12 23:56:29 by hbouhsis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ int	ft_atoi(const char *str)
 	}
 	return (n * sign);
 }
-#include <stdio.h>
+/*#include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 
@@ -56,4 +56,4 @@ int main () {
 
 
    return(0);
-}
+}*/

@@ -1,38 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hbouhsis <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/09 17:42:40 by hbouhsis          #+#    #+#             */
-/*   Updated: 2021/11/13 00:17:09 by hbouhsis         ###   ########.fr       */
+/*   Created: 2021/11/13 01:10:23 by hbouhsis          #+#    #+#             */
+/*   Updated: 2021/11/13 01:12:29 by hbouhsis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"libft.h"
 
-void	*ft_memset(void *dst, int c, size_t len)
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	char	*s;
+	char	*str;
+	int		len;
+	int		i;
 
-	s = (char *)dst;
-	if (!(dst) || !(len))
-		return (0);
-	while (len)
+	len = 0;
+	i = 0;
+	if (!(s))
+		return (NULL);
+	while (s[len])
+		len++;
+	str = (char *)malloc(sizeof (char) * len + 1);
+	if (!(str))
+		return (NULL);
+	while (s[i])
 	{
-		*s = c;
-		len--;
-		s++;
+		str[i] = f(i, s[i]);
+		i++;
 	}
-	return (dst);
+	str[i] = '\0';
+	return (str);
 }
-/*
-int main ()
-{
-	char b1[0xF00];
-
-	char *h = ft_memset("" , 'A', 0);
-	printf("%s\n", h);
-}
-*/

@@ -1,38 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hbouhsis <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/09 17:42:40 by hbouhsis          #+#    #+#             */
-/*   Updated: 2021/11/13 00:17:09 by hbouhsis         ###   ########.fr       */
+/*   Created: 2021/11/13 00:19:56 by hbouhsis          #+#    #+#             */
+/*   Updated: 2021/11/13 00:21:19 by hbouhsis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"libft.h"
 
-void	*ft_memset(void *dst, int c, size_t len)
+void	ft_putchar_fd(char c, int fd)
 {
-	char	*s;
+	write(fd, &c, 1);
+}
 
-	s = (char *)dst;
-	if (!(dst) || !(len))
-		return (0);
-	while (len)
+void	ft_putnbr_fd(int n, int fd)
+{
+	unsigned int	nb;
+
+	nb = n;
+	if (n < 0)
 	{
-		*s = c;
-		len--;
-		s++;
+		nb *= -1;
+		ft_putchar_fd('-', fd);
 	}
-	return (dst);
+	if (nb >= 10)
+	{
+		ft_putnbr_fd(nb / 10, fd);
+		ft_putnbr_fd(nb % 10, fd);
+	}
+	else
+	{
+		nb += '0';
+		ft_putchar_fd(nb, fd);
+	}
 }
-/*
-int main ()
-{
-	char b1[0xF00];
-
-	char *h = ft_memset("" , 'A', 0);
-	printf("%s\n", h);
-}
-*/

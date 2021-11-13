@@ -1,33 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hbouhsis <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/09 18:44:46 by hbouhsis          #+#    #+#             */
-/*   Updated: 2021/11/13 00:14:42 by hbouhsis         ###   ########.fr       */
+/*   Created: 2021/11/13 01:22:58 by hbouhsis          #+#    #+#             */
+/*   Updated: 2021/11/13 01:24:25 by hbouhsis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"libft.h"
 
-char	*ft_memchr(const void *s, int c, size_t n)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	size_t		i;
-	char		*str;
-	char		chr;
+	char			*substr;
+	unsigned int	size;
+	unsigned int	i;
+	char			*str;
 
-	chr = (char)c;
-	i = 0;
+	size = (unsigned int)len;
+	substr = (char *)malloc(len * sizeof(char));
 	str = (char *)s;
-	while (i < n)
+	i = 0;
+	if (!(substr))
+		return (NULL);
+	while (i < size)
 	{
-		if (str[i] == chr)
-		{
-			return (str + i);
-		}
+		substr[i] = str[start];
 		i++;
+		start++;
 	}
-	return (0);
+	substr[i] = '\0';
+	return (substr);
 }
+/*int main ()
+{
+	const char *c = "OHHHOkgbbUDAOH";
+	char *rt = ft_substr(c, 5, 7);
+	printf("%s", rt);
+}*/
