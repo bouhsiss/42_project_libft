@@ -6,7 +6,7 @@
 /*   By: hbouhsis <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/09 18:43:49 by hbouhsis          #+#    #+#             */
-/*   Updated: 2021/11/09 18:43:52 by hbouhsis         ###   ########.fr       */
+/*   Updated: 2021/11/14 22:19:27 by hbouhsis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,39 +16,21 @@ void	*ft_calloc(size_t count, size_t size)
 {
 	char	*str;
 
-	if (count == 0 || size == 0)
-		return (NULL);
-	str = (void *)malloc(size * count);
-	ft_bzero(str, count);
+	if (!(size) || !(count))
+	{
+		str =(void *)malloc(size);
+		str[0] = '\0';
+			return (str);
+	}
+	if(!(str = (void *)malloc(size * count)))
+			return (0);
+	ft_bzero(str, size * count);
 	return (str);
 }
-/*int main()
+/*
+int main()
 {
  
-    int* ptr;
-    int n, i;
- 
-    n = 5;
-    printf("Enter number of elements: %d\n", n);
- 
-    ptr = (int*)ft_calloc(n, sizeof(int));
- 
-    if (ptr == NULL) {
-        printf("Memory not allocated.\n");
-        exit(0);
-    }
-    else {
- 
-        printf("Memory successfully allocated using calloc.\n");
- 
-        for (i = 0; i < n; ++i) {
-            ptr[i] = i + 1;
-        }
-        printf("The elements of the array are: ");
-        for (i = 0; i < n; ++i) {
-            printf("%d, ", ptr[i]);
-        }
-    }
- 
-    return 0;
+   int size = 8656;
+	void *d1 =  ft_calloc(size, sizeof(int));
 }*/

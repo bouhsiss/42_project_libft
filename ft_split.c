@@ -6,7 +6,7 @@
 /*   By: hbouhsis <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/13 00:23:33 by hbouhsis          #+#    #+#             */
-/*   Updated: 2021/11/13 22:39:14 by hbouhsis         ###   ########.fr       */
+/*   Updated: 2021/11/14 22:33:17 by hbouhsis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,13 +28,16 @@ int	wcount(char const *s, char c)
 	return (count);
 }
 
-int	wrlen(char const *str, char c)
+int	wrlen(char const *str, char c, int t)
 {
-	int	t;
+	int	i;
 
-	t = 0;
+	i = 0;
 	while (str[t] != c)
+	{
 		t++;
+		i++;
+	}
 	return (t);
 }
 
@@ -54,9 +57,9 @@ char	**ft_split(char const *s, char c)
 		j = 0;
 		while (s[t] == c)
 			t++;
-		if (!(str[i] = (char *)malloc(sizeof (char) * wrlen(s, c) + 1)))
+		if (!(str[i] = (char *)malloc(sizeof (char) * wrlen(s, c, t) + 1)))
 			return (NULL);
-		while (j < wrlen(s, c) && s[t] != c)
+		while (j < wrlen(s, c, t) && s[t] != c)
 		{
 			str[i][j] = (char)s[t];
 			t++;
@@ -72,7 +75,7 @@ char	**ft_split(char const *s, char c)
 int main ()
 {
 	int	i = 0;
-	const char *str = "ood     jf rn fr";
+	const char *str = "   ood  ";
 	char **ptr = ft_split (str, ' ');
 	while (ptr[i])
 	{

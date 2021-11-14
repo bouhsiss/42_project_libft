@@ -6,7 +6,7 @@
 /*   By: hbouhsis <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/12 23:54:05 by hbouhsis          #+#    #+#             */
-/*   Updated: 2021/11/13 22:50:06 by hbouhsis         ###   ########.fr       */
+/*   Updated: 2021/11/14 20:41:53 by hbouhsis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,9 @@
 
 int	ft_atoi(const char *str)
 {
-	int		n;
+	long	n;
 	int		sign;
-	char	*ptr;
 
-	ptr = (char *)str;
 	n = 0;
 	sign = 1;
 	while (*str == ' ' || *str == '\t' || *str == '\r'
@@ -38,14 +36,15 @@ int	ft_atoi(const char *str)
 	}
 	return (n * sign);
 }
-/*#include <stdio.h>
+/*
+#include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 
 int main () {
    int val;
    
-   printf("%d",atoi("9223372036854775807946844684"));
+   printf("%d",atoi("2147483647"));
 
 
 
