@@ -6,7 +6,7 @@
 /*   By: hbouhsis <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/12 23:54:05 by hbouhsis          #+#    #+#             */
-/*   Updated: 2021/11/12 23:56:29 by hbouhsis         ###   ########.fr       */
+/*   Updated: 2021/11/13 22:50:06 by hbouhsis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,15 +44,9 @@ int	ft_atoi(const char *str)
 
 int main () {
    int val;
-   char str[20];
    
-   strcpy(str, "9223372036854775807");
-   val = ft_atoi(str);
-   printf("String value = %s, Int value =%d\n", str, val);
+   printf("%d",atoi("9223372036854775807946844684"));
 
-   strcpy(str, "tutorialspoint.com");
-   val = ft_atoi(str);
-   printf("String value = %s, Int value =%d\n", str, val);
 
 
    return(0);

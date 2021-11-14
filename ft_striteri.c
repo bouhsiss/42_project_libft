@@ -6,7 +6,7 @@
 /*   By: hbouhsis <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/13 00:54:14 by hbouhsis          #+#    #+#             */
-/*   Updated: 2021/11/13 00:56:01 by hbouhsis         ###   ########.fr       */
+/*   Updated: 2021/11/13 01:28:09 by hbouhsis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 	i = 0;
 	while (s[i])
 	{
-		f(i, s[i]);
+		f(i, s);
 		i++;
 	}
 }

@@ -6,7 +6,7 @@
 /*   By: hbouhsis <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/09 18:39:20 by hbouhsis          #+#    #+#             */
-/*   Updated: 2021/11/09 18:39:25 by hbouhsis         ###   ########.fr       */
+/*   Updated: 2021/11/14 03:06:01 by hbouhsis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,25 +16,26 @@ char	*ft_strrchr(const char *s, int c)
 {
 	int		i;
 	char	*str;
-	char	chr;
 	int		len;
 
 	i = 0;
-	chr = (char)c;
 	str = (char *)s;
 	len = ft_strlen(str);
-	while (len)
-	{
-		if (str[len] == chr)
-			return (str + len);
+	while (len >= 0)
+	{	
+		if (str[len] == c)
+		{
+			return (&str[len]);
+		}	
 		len--;
 	}
 	return (0);
 }
-/*int main () {
+/*
+int main () {
    int len;
-   const char str[] = "http://www.tutorialspoint.com";
-   const char ch = '.';
+   const char str[] = "ab\0bbbbbbb\0b";
+   const char ch = '\0';
    char *ret;
 
    ret = ft_strrchr(str, ch);

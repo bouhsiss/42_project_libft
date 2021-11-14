@@ -6,7 +6,7 @@
 /*   By: hbouhsis <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/09 18:44:57 by hbouhsis          #+#    #+#             */
-/*   Updated: 2021/11/13 00:14:56 by hbouhsis         ###   ########.fr       */
+/*   Updated: 2021/11/14 02:18:45 by hbouhsis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,26 +15,26 @@
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {	
 	size_t		i;
-	char		*c1;
-	char		*c2;
+	unsigned char		*c1;
+	unsigned char		*c2;
 
 	i = 0;
-	c1 = (char *)s1;
-	c2 = (char *)s2;
-	while (c1[i] && c2[i] && c1[i] == c2[i] && i < n)
+	c1 = (unsigned char *)s1;
+	c2 = (unsigned char *)s2;
+	while (c1[i] == c2[i] && i < n - 1)
 		i++;
 	return (c1[i] - c2[i]);
 }
-
-/*int main () {
-   char str1[15];
-   char str2[15];
+/*
+int main () {
+   char str1[15] = "\xff\xaa\xde\x12";
+   char str2[15] = "\xff\xaa\xde\x12MACOSAAAAA";
    int ret;
 
-   memcpy(str1, "abcdef", 6);
-   memcpy(str2, "ABCDEF", 6);
+   //memcpy(str1, "\xff\xaa\xde\x12", 6);
+  // memcpy(str2, "\xff\xaa\xde\x12MACOSAAAAA", 6);
 
-   ret =ft_memcmp(str1, str2, 5);
+   ret =ft_memcmp(str1, str2, 4);
 
    if(ret > 0) {
       printf("str2 is less than str1");

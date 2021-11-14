@@ -6,7 +6,7 @@
 /*   By: hbouhsis <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/09 18:43:41 by hbouhsis          #+#    #+#             */
-/*   Updated: 2021/11/09 18:43:44 by hbouhsis         ###   ########.fr       */
+/*   Updated: 2021/11/13 23:28:38 by hbouhsis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,26 @@
 
 void	ft_bzero(void *s, size_t n)
 {
+	size_t i;
 	char	*c;
 
+	i = 0;
 	c = (char *)s;
-	if (n != 0)
-	{
-		while (n)
+
+		while (i < n)
 		{
-			*c = 0;
-			n--;
-			s++;
+			c[i] = 0;
+			i++;
 		}
-	}
 }
+/*
+int main ()
+{
+	char *str = "aaaaa";
+	char *sh = "aaaaa";
+	ft_bzero(str, 20);
+	//bzero(sh, 20);
+	printf("mine : %s", str);
+	//printf("their :%s", sh);
+}
+*/

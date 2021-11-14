@@ -1,6 +1,6 @@
 NAME = libft.a
 CC = gcc
-FLAGS = -Wall -Wextra -Werror -I -c
+FLAGS = -Wall -Wextra -Werror
 SRCS = $(wildcard *.c)
 OBJS = $(SRCS:.c=.o)
 

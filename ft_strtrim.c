@@ -6,44 +6,11 @@
 /*   By: hbouhsis <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/13 01:13:44 by hbouhsis          #+#    #+#             */
-/*   Updated: 2021/11/13 01:22:34 by hbouhsis         ###   ########.fr       */
+/*   Updated: 2021/11/13 19:58:04 by hbouhsis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"libft.h"
-
-size_t	ft_strlen(const char *str)
-{
-	size_t	i;
-
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
-}
-
-char	*ft_substr(char const *s, unsigned int start, size_t len)
-{
-	unsigned int	size;
-	unsigned int	i;
-	char			*str;
-	char			*substr;
-
-	size = (unsigned int)len;
-	substr = (char *)malloc(len * sizeof (char));
-	str = (char *)s;
-	i = 0;
-	if (!(substr))
-		return (NULL);
-	while (i < size)
-	{
-		substr[i] = str[start];
-		i++;
-		start++;
-	}
-	substr[i] = '\0';
-	return (substr);
-}
 
 int	fnfirst(char const *s1, char const *set)
 {
