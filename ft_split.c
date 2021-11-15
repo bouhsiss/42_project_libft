@@ -6,7 +6,7 @@
 /*   By: hbouhsis <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/13 00:23:33 by hbouhsis          #+#    #+#             */
-/*   Updated: 2021/11/14 22:33:17 by hbouhsis         ###   ########.fr       */
+/*   Updated: 2021/11/15 14:44:19 by hbouhsis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,8 @@ char	**ft_split(char const *s, char c)
 
 	i = 0;
 	t = 0;
+	if (!s)
+		return (0);
 	if (!(str = (char **)malloc(sizeof(char *) * (wcount(s, c)) + 1)))
 		return (NULL);
 	while (i < wcount(s, c))

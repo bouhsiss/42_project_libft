@@ -6,7 +6,7 @@
 /*   By: hbouhsis <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/13 00:56:23 by hbouhsis          #+#    #+#             */
-/*   Updated: 2021/11/14 22:33:50 by hbouhsis         ###   ########.fr       */
+/*   Updated: 2021/11/15 13:28:09 by hbouhsis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	char		*c1;
 	char		*c2;
 
+	if (!s1 || !s2)
+		return (0);
 	c1 = (char *)s1;
 	c2 = (char *)s2;
 	total = ft_strlen(c1) + ft_strlen(c2);

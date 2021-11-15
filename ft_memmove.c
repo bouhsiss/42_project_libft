@@ -6,7 +6,7 @@
 /*   By: hbouhsis <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/09 18:45:20 by hbouhsis          #+#    #+#             */
-/*   Updated: 2021/11/14 02:09:35 by hbouhsis         ###   ########.fr       */
+/*   Updated: 2021/11/15 00:09:01 by hbouhsis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	}
 	return (dst);
 }
-
+/*
 int main () {
    char dest[0xF0];
    char *src1 = "thanks to @apellicc for this test !\r\n";
@@ -52,4 +52,4 @@ int main () {
 
    return(0);
 }
-
+*/
