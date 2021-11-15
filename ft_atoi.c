@@ -6,7 +6,7 @@
 /*   By: hbouhsis <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/12 23:54:05 by hbouhsis          #+#    #+#             */
-/*   Updated: 2021/11/15 14:44:34 by hbouhsis         ###   ########.fr       */
+/*   Updated: 2021/11/15 16:40:51 by hbouhsis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int	ft_atoi(const char *str)
 {
 	unsigned long	n;
-	int		sign;
+	int				sign;
 
 	n = 0;
 	sign = 1;
@@ -33,11 +33,10 @@ int	ft_atoi(const char *str)
 	{
 		n = n * 10 + (*str - 48);
 		if (n > 9223372036854775807 && sign == 1)
-			return(-1);
+			return (-1);
 		if (n >= 9223372036854775807 && sign == -1)
-			return(0);
+			return (0);
 		str++;
-	
 	}
 	return (n * sign);
 }

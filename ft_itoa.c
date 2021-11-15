@@ -6,7 +6,7 @@
 /*   By: hbouhsis <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/12 23:56:49 by hbouhsis          #+#    #+#             */
-/*   Updated: 2021/11/15 16:11:49 by hbouhsis         ###   ########.fr       */
+/*   Updated: 2021/11/15 16:47:27 by hbouhsis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int	countlen(long n)
 	return (i);
 }
 
-char	*cnvrt(char *str, int  len, long  n, int i)
+char	*cnvrt(char *str, int len, long n, int i)
 {
 	while (n > 0 && len != i)
 	{
@@ -43,7 +43,7 @@ char	*ft_itoa(int n)
 	int		len;
 	char	*str;
 	int		i;
-	long ng;
+	long	ng;
 
 	i = 0;
 	ng = (long)n;
@@ -51,8 +51,6 @@ char	*ft_itoa(int n)
 	if (n < 0)
 		len++;
 	str = (char *)malloc (sizeof(char) * len + 1);
-//	if (n == -2147483648)
-//		return ("-2147483648\0");
 	if (!(str))
 		return (NULL);
 	if (!n)
@@ -67,8 +65,8 @@ char	*ft_itoa(int n)
 	str[len] = '\0';
 	return (str);
 }
-
+/*
 int	main ()
 {
 	printf("%s\n", ft_itoa(-2147483648 ));
-}
+}*/

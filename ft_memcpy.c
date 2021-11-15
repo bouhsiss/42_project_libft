@@ -6,7 +6,7 @@
 /*   By: hbouhsis <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/09 18:45:07 by hbouhsis          #+#    #+#             */
-/*   Updated: 2021/11/14 00:01:47 by hbouhsis         ###   ########.fr       */
+/*   Updated: 2021/11/15 16:49:20 by hbouhsis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	sorc = (char *)src;
 	dest = (char *)dst;
 	i = 0;
-	if (dst != 0 || src != 0 )
+	if (dst != 0 || src != 0)
 	{
 		while (i < n)
 		{
@@ -29,10 +29,8 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 			i++;
 		}
 	}
-		return (dst);
-	
+	return (dst);
 }
-
 /*int main () {
    char dest[] = "oldstring";
 

@@ -6,12 +6,12 @@
 /*   By: hbouhsis <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/09 17:42:40 by hbouhsis          #+#    #+#             */
-/*   Updated: 2021/11/14 03:53:00 by hbouhsis         ###   ########.fr       */
+/*   Updated: 2021/11/15 16:51:45 by hbouhsis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"libft.h"
-#include <string.h>
+
 void	*ft_memset(void *dst, int c, size_t len)
 {
 	unsigned char	*s;

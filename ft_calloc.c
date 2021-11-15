@@ -6,7 +6,7 @@
 /*   By: hbouhsis <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/09 18:43:49 by hbouhsis          #+#    #+#             */
-/*   Updated: 2021/11/14 22:19:27 by hbouhsis         ###   ########.fr       */
+/*   Updated: 2021/11/15 16:45:16 by hbouhsis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,13 @@ void	*ft_calloc(size_t count, size_t size)
 
 	if (!(size) || !(count))
 	{
-		str =(void *)malloc(size);
+		str = (void *)malloc(size);
 		str[0] = '\0';
-			return (str);
+		return (str);
 	}
-	if(!(str = (void *)malloc(size * count)))
-			return (0);
+	str = (void *)malloc(size * count);
+	if (!str)
+		return (0);
 	ft_bzero(str, size * count);
 	return (str);
 }

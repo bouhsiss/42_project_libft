@@ -6,7 +6,7 @@
 /*   By: hbouhsis <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/09 18:51:32 by hbouhsis          #+#    #+#             */
-/*   Updated: 2021/11/14 02:40:25 by hbouhsis         ###   ########.fr       */
+/*   Updated: 2021/11/15 16:54:35 by hbouhsis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@ char	*ft_strchr(const char *s, int c)
 	str = (char *)s;
 	while (*str != c)
 	{
-		if (*str  == '\0')
-			return(0);
+		if (*str == '\0')
+			return (0);
 		str++;
 	}
 	return (str);

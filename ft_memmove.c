@@ -6,7 +6,7 @@
 /*   By: hbouhsis <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/09 18:45:20 by hbouhsis          #+#    #+#             */
-/*   Updated: 2021/11/15 00:09:01 by hbouhsis         ###   ########.fr       */
+/*   Updated: 2021/11/15 16:51:23 by hbouhsis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	}
 	else
 	{
-		while (i<len)
+		while (i < len)
 		{
 			desti[i] = source[i];
 			i++;
