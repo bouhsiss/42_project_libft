@@ -1,20 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hbouhsis <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/09 18:40:38 by hbouhsis          #+#    #+#             */
-/*   Updated: 2021/11/16 14:46:12 by hbouhsis         ###   ########.fr       */
+/*   Created: 2021/11/16 21:03:27 by hbouhsis          #+#    #+#             */
+/*   Updated: 2021/11/16 21:57:26 by hbouhsis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"libft.h"
 
-int	ft_tolower(int c)
+void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	if (c >= 65 && c <= 90)
-		c = c + 32;
-	return (c);
+	t_list	*list;
+
+	list = *lst;
+	if (!lst)
+		return ;
+	if (!*lst)
+		*lst = new;
+	else
+	{
+		list = ft_lstlast(*lst);
+		list->next = new;
+	}
 }

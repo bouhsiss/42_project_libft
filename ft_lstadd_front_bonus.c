@@ -1,36 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hbouhsis <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/09 17:42:40 by hbouhsis          #+#    #+#             */
-/*   Updated: 2021/11/16 14:45:54 by hbouhsis         ###   ########.fr       */
+/*   Created: 2021/11/16 21:07:18 by hbouhsis          #+#    #+#             */
+/*   Updated: 2021/11/16 21:08:43 by hbouhsis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"libft.h"
 
-void	*ft_memset(void *dst, int c, size_t len)
+void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	unsigned char	*s;
-
-	s = (unsigned char *)dst;
-	while (len)
-	{
-		*s = c;
-		len--;
-		s++;
-	}
-	return (dst);
+	if (!lst)
+		return ;
+	new->next = *lst;
+	*lst = new;
 }
 /*
 int main ()
 {
-//	char b1[0xF00];
+    t_list  *tmp, *node;
+	int data, i;
 
-	ft_memset(NULL , 'A', 55);
-//	printf("%s\n", h);
-}
-*/
+	tmp = (t_list *)malloc(sizeof(t_list));
+	node = (t_list *)malloc(sizeof(t_list));
+	tmp->content = "37";
+	tmp->next = NULL;
+	node->content = "13";
+	node->next = NULL;
+
+	ft_lstadd_front(&tmp, node );
+	while (tmp != NULL)
+	{
+		printf("%s", tmp->content);
+		tmp = tmp->next;
+	}
+}*/

@@ -6,13 +6,13 @@
 /*   By: hbouhsis <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/13 01:13:44 by hbouhsis          #+#    #+#             */
-/*   Updated: 2021/11/15 13:27:29 by hbouhsis         ###   ########.fr       */
+/*   Updated: 2021/11/16 02:01:13 by hbouhsis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"libft.h"
 
-int	fnfirst(char const *s1, char const *set)
+size_t	fnfirst(char const *s1, char const *set)
 {
 	int	i;
 	int	first;
@@ -52,19 +52,27 @@ size_t	fnlast(char const *s1, char const *set)
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	int		first;
+	size_t	first;
 	size_t	last;
 	size_t	size;
+	char	*ptr;
 
 	if (!(s1))
 		return (NULL);
 	first = fnfirst(s1, set);
 	last = fnlast(s1, set);
 	size = last - first +1;
+	if (first >= ft_strlen(s1))
+	{
+		ptr = (char *)malloc(sizeof(char));
+		ptr[0] = '\0';
+		return (ptr);
+	}
 	return (ft_substr(s1, first, size));
 }
-/*int main()
+/*
+int main()
 {
-    char *rt = ft_strtrim("", "dnld");
+    char *rt = ft_strtrim("AAA AAKKAAKK", " AAKd");
     printf("%s\n",rt);
 }*/

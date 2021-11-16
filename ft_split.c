@@ -6,7 +6,7 @@
 /*   By: hbouhsis <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/13 00:23:33 by hbouhsis          #+#    #+#             */
-/*   Updated: 2021/11/15 16:53:20 by hbouhsis         ###   ########.fr       */
+/*   Updated: 2021/11/16 22:07:01 by hbouhsis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,23 +28,43 @@ int	wcount(char const *s, char c)
 	return (count);
 }
 
-int	wrlen(char const *str, char c, int t)
+int	wrlen(char const *s, char c, int t)
 {
 	int	i;
 
 	i = 0;
-	while (str[t] != c)
+	while (s[t] != c && s[t] != 0)
 	{
 		t++;
 		i++;
 	}
-	return (t);
+	return (i);
+}
+
+char	*copy(int t, char const *s, char c)
+{
+	int		j;
+	int		len ;
+	char	*str;
+
+	j = 0;
+	len = wrlen(s, c, t);
+	str = (char *)malloc(sizeof (char) * len + 1);
+	if (!str)
+		return (NULL);
+	while (j < len && s[t] != c)
+	{
+		str[j] = (char)s[t];
+		j++;
+		t++;
+	}
+	str[j] = '\0';
+	return (str);
 }
 
 char	**ft_split(char const *s, char c)
 {
 	int		i;
-	int		j;
 	int		t;
 	char	**str;
 
@@ -57,19 +77,10 @@ char	**ft_split(char const *s, char c)
 		return (NULL);
 	while (i < wcount(s, c))
 	{
-		j = 0;
 		while (s[t] == c)
 			t++;
-		str[i] = (char *)malloc(sizeof (char) * wrlen(s, c, t) + 1);
-		if (!str)
-			return (NULL);
-		while (j < wrlen(s, c, t) && s[t] != c)
-		{
-			str[i][j] = (char)s[t];
-			t++;
-			j++;
-		}
-		str[i][j] = '\0';
+		str[i] = copy(t, s, c);
+		t += wrlen(s, c, t);
 		i++;
 	}
 	str[i] = 0;
@@ -79,8 +90,8 @@ char	**ft_split(char const *s, char c)
 int main ()
 {
 	int	i = 0;
-	const char *str = "   ood  ";
-	char **ptr = ft_split (str, ' ');
+	const char *str = "\0fhihd\0\0\0ofonng\0";
+	char **ptr = ft_split (str, '\0');
 	while (ptr[i])
 	{
 		printf ( "%s\n", ptr[i]);
@@ -88,5 +99,4 @@ int main ()
 		i++;
 	}
 	free(ptr);
-}
-*/
+}*/

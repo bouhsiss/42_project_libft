@@ -1,20 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hbouhsis <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/09 18:40:38 by hbouhsis          #+#    #+#             */
-/*   Updated: 2021/11/16 14:46:12 by hbouhsis         ###   ########.fr       */
+/*   Created: 2021/11/16 21:13:24 by hbouhsis          #+#    #+#             */
+/*   Updated: 2021/11/16 22:00:20 by hbouhsis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"libft.h"
 
-int	ft_tolower(int c)
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	if (c >= 65 && c <= 90)
-		c = c + 32;
-	return (c);
+	t_list	*new;
+	t_list	*temp;
+
+	temp = lst;
+	new = (t_list *)malloc(sizeof(t_list));
+	if (!new)
+		del(lst);
+	while (temp != NULL )
+	{
+		new = temp->next;
+		new = f(temp->content);
+	}
+	return (new);
 }
