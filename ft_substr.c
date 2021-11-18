@@ -6,7 +6,7 @@
 /*   By: hbouhsis <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/13 01:22:58 by hbouhsis          #+#    #+#             */
-/*   Updated: 2021/11/18 02:53:25 by hbouhsis         ###   ########.fr       */
+/*   Updated: 2021/11/18 17:15:41 by hbouhsis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,19 +15,17 @@
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char			*substr;
-	unsigned int	size;
-	unsigned int	i;
+	size_t			size;
+	size_t			i;
 
-	if (!s)
-		return(0);
-	if (start >= ft_strlen(s) || len >ft_strlen(s))
+	size = len;
+	if (start >= ft_strlen(s))
 		return (ft_strdup("\0"));
-	size = (unsigned int)len;
-	substr = (char *)malloc(len * sizeof(char) + 1);
+	if (len > ft_strlen(s))
+		size = ft_strlen(s) - start + 1;
+	substr = (char *)malloc(size * sizeof(char) + 1);
 	if (!(substr))
 		return (0);
-//	if (start >= ft_strlen(s) || len > ft_strlen(s) || !s)
-//		return (ft_strdup("\0"));
 	i = 0;
 	while (i < size)
 	{
@@ -41,13 +39,6 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 /*
 int main ()
 {
-	char str[] = "lorem ipsum dolor sit amet";
-	char *strsub;
-	if (!(strsub = ft_substr(str, 7, 0)))
-		printf("NULL");
-	else 
-		printf("%s\n", strsub);
-	if (str == strsub)
-		printf("\nA new string was not returned");
-
+	char *str = ft_substr("tripouille", 0, 42000);
+	printf("%s\n", str);
 }*/

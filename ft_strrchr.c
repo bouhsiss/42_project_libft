@@ -6,7 +6,7 @@
 /*   By: hbouhsis <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/09 18:39:20 by hbouhsis          #+#    #+#             */
-/*   Updated: 2021/11/14 03:06:01 by hbouhsis         ###   ########.fr       */
+/*   Updated: 2021/11/18 15:38:43 by hbouhsis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,24 +23,17 @@ char	*ft_strrchr(const char *s, int c)
 	len = ft_strlen(str);
 	while (len >= 0)
 	{	
-		if (str[len] == c)
+		if (str[len] == (char)c)
 		{
 			return (&str[len]);
 		}	
 		len--;
 	}
-	return (0);
+	return (NULL);
 }
 /*
-int main () {
-   int len;
-   const char str[] = "ab\0bbbbbbb\0b";
-   const char ch = '\0';
-   char *ret;
-
-   ret = ft_strrchr(str, ch);
-
-   printf("String after |%c| is - |%s|\n", ch, ret);
-   
-   return(0);
+int main ()
+{
+	char s[] = "tripouille";
+	printf("%s\n",ft_strrchr( s, 0));
 }*/
