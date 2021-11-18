@@ -6,11 +6,11 @@
 /*   By: hbouhsis <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 21:18:58 by hbouhsis          #+#    #+#             */
-/*   Updated: 2021/11/16 21:57:09 by hbouhsis         ###   ########.fr       */
+/*   Updated: 2021/11/17 19:13:52 by hbouhsis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"libft.h"
+#include"libft_bonus.h"
 
 int	ft_lstsize(t_list *lst)
 {

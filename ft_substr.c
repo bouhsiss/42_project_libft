@@ -6,7 +6,7 @@
 /*   By: hbouhsis <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/13 01:22:58 by hbouhsis          #+#    #+#             */
-/*   Updated: 2021/11/16 01:58:29 by hbouhsis         ###   ########.fr       */
+/*   Updated: 2021/11/18 02:53:25 by hbouhsis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,17 +18,16 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	unsigned int	size;
 	unsigned int	i;
 
-	if ((size_t)start > len || !(s))
-		return (0);
+	if (!s)
+		return(0);
+	if (start >= ft_strlen(s) || len >ft_strlen(s))
+		return (ft_strdup("\0"));
 	size = (unsigned int)len;
 	substr = (char *)malloc(len * sizeof(char) + 1);
 	if (!(substr))
 		return (0);
-	if (start >= ft_strlen(s))
-	{
-		substr[0] = '\0';
-		return (substr);
-	}
+//	if (start >= ft_strlen(s) || len > ft_strlen(s) || !s)
+//		return (ft_strdup("\0"));
 	i = 0;
 	while (i < size)
 	{
@@ -39,9 +38,16 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	substr[i] = '\0';
 	return (substr);
 }
-/*int main ()
+/*
+int main ()
 {
-	const char *c = "OHHHOkgbbUDAOH";
-	char *rt = ft_substr(c, 5, 7);
-	printf("%s", rt);
+	char str[] = "lorem ipsum dolor sit amet";
+	char *strsub;
+	if (!(strsub = ft_substr(str, 7, 0)))
+		printf("NULL");
+	else 
+		printf("%s\n", strsub);
+	if (str == strsub)
+		printf("\nA new string was not returned");
+
 }*/

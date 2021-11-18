@@ -6,7 +6,7 @@
 /*   By: hbouhsis <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/09 18:52:14 by hbouhsis          #+#    #+#             */
-/*   Updated: 2021/11/15 16:33:09 by hbouhsis         ###   ########.fr       */
+/*   Updated: 2021/11/18 01:55:50 by hbouhsis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,11 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	size_t		srclen;
 
 	i = 0;
-	if (size == 0)
-		return (ft_strlen(src));
 	destlen = ft_strlen(dst);
 	srclen = ft_strlen(src);
-	if (size - 1 <= destlen)
+	if (size <= destlen)
 		return (srclen + size);
-	while (destlen + i < size - 1)
+	while (i < size - destlen - 1 && src[i])
 	{
 		dst[destlen + i] = src[i];
 		i++;
@@ -36,6 +34,14 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 /*
 int main()
 {
-	 ft_strlcat("fhojd", "skn", 0);
+	char *dest;
+	if (!(dest = (char *)malloc(sizeof(*dest) * 15)))
+		return (0);
+	memset(dest, 0, 15);
+	memset(dest, 'r', 6);
+	dest[10] = 'a';
+
+	printf("%zu\n", ft_strlcat(dest, "lorem ipsum dolor sit ", 0));
+	write(1, dest, 15);
 }
 */
