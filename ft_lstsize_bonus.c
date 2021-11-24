@@ -1,32 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_lstsize_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hbouhsis <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/16 21:14:09 by hbouhsis          #+#    #+#             */
-/*   Updated: 2021/11/17 19:13:35 by hbouhsis         ###   ########.fr       */
+/*   Created: 2021/11/19 22:25:13 by hbouhsis          #+#    #+#             */
+/*   Updated: 2021/11/21 00:14:57 by hbouhsis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"libft_bonus.h"
+#include"libft.h"
 
-t_list	*ft_lstnew(void *content)
+int	ft_lstsize(t_list *lst)
 {
-	t_list	*new;
+	int	i;
 
-	new = (t_list *)malloc(sizeof(t_list));
-	if (!new)
+	i = 1;
+	if (!lst)
 		return (0);
-	new -> content = content;
-	new -> next = NULL;
-	return (new);
+	while (lst->next != NULL)
+	{
+		lst = lst->next;
+		i++;
+	}
+	return (i);
 }
-/*
-int main ()
-{
-	t_list *N;
-	N = ft_lstnew("houda");
-	printf ("%s", N->content );
-}*/

@@ -6,7 +6,7 @@
 /*   By: hbouhsis <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/09 18:45:20 by hbouhsis          #+#    #+#             */
-/*   Updated: 2021/11/15 20:55:49 by hbouhsis         ###   ########.fr       */
+/*   Updated: 2021/11/21 00:15:35 by hbouhsis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,15 +35,3 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	}
 	return (dst);
 }
-/*
-int main () {
-   char dest[0xF0];
-   char *src1 = "thanks to @apellicc for this test !\r\n";
-
-	printf("Before memmove dest = %s, src = %s\n", dest, src1);
-	memmove(dest ,src1 , ft_strlen(src1));
-	printf("After memmove dest = %s, src = %s\n", dest, src1);
-
-   return(0);
-}
-*/

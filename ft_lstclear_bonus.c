@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstclear.c                                      :+:      :+:    :+:   */
+/*   ft_lstclear_bonus.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hbouhsis <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/16 21:08:55 by hbouhsis          #+#    #+#             */
-/*   Updated: 2021/11/17 18:54:08 by hbouhsis         ###   ########.fr       */
+/*   Created: 2021/11/19 22:22:14 by hbouhsis          #+#    #+#             */
+/*   Updated: 2021/11/21 00:13:37 by hbouhsis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"libft_bonus.h"
+#include"libft.h"
 
 void	ft_lstclear(t_list **lst, void (*del) (void*))
 {
@@ -18,6 +18,8 @@ void	ft_lstclear(t_list **lst, void (*del) (void*))
 	t_list	*nxt;
 
 	curr = *lst;
+	if (!lst)
+		return ;
 	while (curr != NULL)
 	{
 		nxt = curr->next;

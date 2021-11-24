@@ -12,7 +12,7 @@
 
 #include"libft.h"
 
-char	*ft_strcat(char	*dest, char	*src)
+static char	*ft_strcat(char	*dest, char	*src)
 {
 	int	i;
 	int	destlen;
@@ -28,7 +28,7 @@ char	*ft_strcat(char	*dest, char	*src)
 	return (dest);
 }
 
-char	*ft_strcpy(char	*dest, char	*src)
+static char	*ft_strcpy(char	*dest, char	*src)
 {
 	int	i;
 
@@ -54,18 +54,10 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	c1 = (char *)s1;
 	c2 = (char *)s2;
 	total = ft_strlen(c1) + ft_strlen(c2);
-	str = (char *)malloc((int)total + 1 * sizeof(char));
+	str = (char *)malloc((total + 1) * sizeof(char));
 	if (!(str))
 		return (NULL);
 	ft_strcpy(str, c1);
 	ft_strcat(str, c2);
 	return (str);
 }
-
-/*int main ()
-{
-    const char *c1 = "hou";
-    const char *c2 = "da"; 
-    char * rt = ft_strjoin(c1,c2);
-    printf ("%s", rt);
-}*/

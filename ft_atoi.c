@@ -40,17 +40,3 @@ int	ft_atoi(const char *str)
 	}
 	return (n * sign);
 }
-/*
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-
-int main () {
-   int val;
-   
-   printf("%d",atoi("99999999999999999999999999999"));
-
-
-
-   return(0);
-}*/

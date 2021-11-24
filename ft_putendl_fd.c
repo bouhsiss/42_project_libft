@@ -6,11 +6,12 @@
 /*   By: hbouhsis <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/13 00:18:30 by hbouhsis          #+#    #+#             */
-/*   Updated: 2021/11/13 01:28:58 by hbouhsis         ###   ########.fr       */
+/*   Updated: 2021/11/19 22:16:52 by hbouhsis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"libft.h"
+#include<fcntl.h>
 
 void	ft_putendl_fd(char *s, int fd)
 {

@@ -28,10 +28,3 @@ void	*ft_calloc(size_t count, size_t size)
 	ft_bzero(str, size * count);
 	return (str);
 }
-/*
-int main()
-{
- 
-   int size = 8656;
-	void *d1 =  ft_calloc(size, sizeof(int));
-}*/

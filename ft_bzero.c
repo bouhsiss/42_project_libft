@@ -25,14 +25,3 @@ void	ft_bzero(void *s, size_t n)
 		i++;
 	}
 }
-/*
-int main ()
-{
-	char *str = "aaaaa";
-	char *sh = "aaaaa";
-	ft_bzero(str, 20);
-	//bzero(sh, 20);
-	printf("mine : %s", str);
-	//printf("their :%s", sh);
-}
-*/

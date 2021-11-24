@@ -31,23 +31,3 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	}
 	return (dst);
 }
-/*int main () {
-   char dest[] = "oldstring";
-
-   printf("Before memmove dest = %s, src = %s\n", dest, dest);
-   ft_memcpy(dest +2, dest, 3);
-   printf("After memmove dest = %s, src = %s\n", dest, dest);
-
-   return(0);
-}*/
-/*
-
-int main () {
-   char dest[] = "abcde";
-
-   printf("Before memcpy dest = %s, src = %s\n", dest, dest);
-   ft_memcpy(dest +2, dest, 3);
-   printf("After memcpy dest = %s, src = %s\n", dest, dest);
-
-   return(0);
-}*/

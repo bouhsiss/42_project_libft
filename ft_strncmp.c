@@ -27,9 +27,3 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 		i++;
 	return (c1[i] - c2[i]);
 }
-/*
-int main ()
-{
-	int arg;
-	printf("%d",ft_strncmp("ekbdnx", "dvkxds", 0));
-}*/

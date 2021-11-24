@@ -6,11 +6,12 @@
 /*   By: hbouhsis <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/13 00:17:51 by hbouhsis          #+#    #+#             */
-/*   Updated: 2021/11/15 00:03:32 by hbouhsis         ###   ########.fr       */
+/*   Updated: 2021/11/19 22:16:21 by hbouhsis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"libft.h"
+#include<fcntl.h>
 
 void	ft_putchar_fd(char c, int fd)
 {

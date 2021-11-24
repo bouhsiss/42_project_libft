@@ -1,41 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
+/*   ft_lstiter_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hbouhsis <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/16 21:07:18 by hbouhsis          #+#    #+#             */
-/*   Updated: 2021/11/17 18:53:48 by hbouhsis         ###   ########.fr       */
+/*   Created: 2021/11/19 22:22:54 by hbouhsis          #+#    #+#             */
+/*   Updated: 2021/11/19 22:23:55 by hbouhsis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"libft_bonus.h"
+#include"libft.h"
 
-void	ft_lstadd_front(t_list **lst, t_list *new)
+void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
 	if (!lst)
 		return ;
-	new->next = *lst;
-	*lst = new;
-}
-/*
-int main ()
-{
-    t_list  *tmp, *node;
-	int data, i;
-
-	tmp = (t_list *)malloc(sizeof(t_list));
-	node = (t_list *)malloc(sizeof(t_list));
-	tmp->content = "37";
-	tmp->next = NULL;
-	node->content = "13";
-	node->next = NULL;
-
-	ft_lstadd_front(&tmp, node );
-	while (tmp != NULL)
+	while (lst)
 	{
-		printf("%s", tmp->content);
-		tmp = tmp->next;
+		f(lst->content);
+		lst = lst->next;
 	}
-}*/
+}

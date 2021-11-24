@@ -12,7 +12,7 @@
 
 #include"libft.h"
 
-int	countlen(long n)
+static int	countlen(long n)
 {
 	int	i;
 
@@ -27,7 +27,7 @@ int	countlen(long n)
 	return (i);
 }
 
-char	*cnvrt(char *str, int len, long n, int i)
+static char	*cnvrt(char *str, int len, long n, int i)
 {
 	while (n > 0 && len != i)
 	{
@@ -65,11 +65,3 @@ char	*ft_itoa(int n)
 	str[len] = '\0';
 	return (str);
 }
-/*
-int	main ()
-{
-	char *s = ft_itoa(0);
-	printf("%s\n", s);
-	printf("%zu", strlen("0" +1));
-
-}*/

@@ -6,11 +6,12 @@
 /*   By: hbouhsis <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/13 00:19:56 by hbouhsis          #+#    #+#             */
-/*   Updated: 2021/11/13 00:21:19 by hbouhsis         ###   ########.fr       */
+/*   Updated: 2021/11/19 22:17:06 by hbouhsis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"libft.h"
+#include<fcntl.h>
 
 void	ft_putnbr_fd(int n, int fd)
 {

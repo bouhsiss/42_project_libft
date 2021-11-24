@@ -25,10 +25,3 @@ char	*ft_strchr(const char *s, int c)
 	}
 	return (str);
 }
-/*
-int main ()
-{
-	char s[] = "tripouille";
-	printf("%c", 't' + 256);
-	printf("%s\n", ft_strchr(s, 't' + 256));
-}*/

@@ -37,11 +37,3 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	}
 	return (0);
 }
-/*int main()
-{
-     char hay[900] = "hello my name is";
-     char nedl[900] = "my";
-    char *bobia = ft_strnstr(hay, nedl, 9);
-    printf("%s", );
-
-}*/

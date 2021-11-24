@@ -31,9 +31,3 @@ char	*ft_strrchr(const char *s, int c)
 	}
 	return (NULL);
 }
-/*
-int main ()
-{
-	char s[] = "tripouille";
-	printf("%s\n",ft_strrchr( s, 0));
-}*/

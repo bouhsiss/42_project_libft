@@ -6,13 +6,13 @@
 /*   By: hbouhsis <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/13 00:23:33 by hbouhsis          #+#    #+#             */
-/*   Updated: 2021/11/18 17:21:35 by hbouhsis         ###   ########.fr       */
+/*   Updated: 2021/11/19 05:27:50 by hbouhsis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"libft.h"
 
-int	wcount(char const *s, char c)
+static int	wcount(char const *s, char c)
 {
 	int	i;
 	int	count;
@@ -28,7 +28,7 @@ int	wcount(char const *s, char c)
 	return (count);
 }
 
-int	wrlen(char const *s, char c, int t)
+static int	wrlen(char const *s, char c, int t)
 {
 	int	i;
 
@@ -41,7 +41,7 @@ int	wrlen(char const *s, char c, int t)
 	return (i);
 }
 
-char	*copy(int t, char const *s, char c)
+static char	*copy(int t, char const *s, char c)
 {
 	int		j;
 	int		len ;
@@ -71,8 +71,8 @@ char	**ft_split(char const *s, char c)
 	i = 0;
 	t = 0;
 	if (!s)
-		return (0);
-	str = (char **)malloc(sizeof(char *) * (wcount(s, c)) + 1);
+		return (NULL);
+	str = (char **)malloc(sizeof(char *) * (wcount(s, c) + 1));
 	if (!str)
 		return (NULL);
 	while (i < wcount(s, c))
@@ -86,17 +86,3 @@ char	**ft_split(char const *s, char c)
 	str[i] = 0;
 	return (str);
 }
-/*
-int main ()
-{
-	int	i = 0;
-	const char *str = "\0fhihd\0\0\0ofonng\0";
-	char **ptr = ft_split (str, '\0');
-	while (ptr[i])
-	{
-		printf ( "%s\n", ptr[i]);
-		free(ptr[i]);
-		i++;
-	}
-	free(ptr);
-}*/
